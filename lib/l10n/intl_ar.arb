@@ -1,0 +1,18 @@
+{
+    "appTitle": "مشفى زايد الشيرتي",
+    "requestError": "خطأ في الطلب",
+    "badRequest": "خطأ في البيانات",
+    "unprocessableEntity": "خطأ في البيانات",
+    "internalServerError": "خطأ في الخادم",
+    "conflictConnection": "تعارض في الاتصال",
+    "unauthorized": "غير مصرح بالوصول",
+    "notFound": "غير موجود",
+    "noInternetConnection": "لا يوجد اتصال بالانترنت",
+    "deadlineExceeded": "انتهت مدة الاتصال",
+    "accessForbidden": "غير مصرح بالوصول",
+    "badCertificate": "خطأ في الشهادة",
+    "connectionError": "خطأ في الاتصال",
+    "badResponse": "استجابة سيئة",
+    "welcome": "مرحبا",
+    "passwordChecker": "كلمة السر يجب أن تكون أكثر من 4 أحرف و اقل من 10 احرف"
+}

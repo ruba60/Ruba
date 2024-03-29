@@ -1,0 +1,18 @@
+{
+    "appTitle": "Zaid Al- Alshereti Hospital",
+    "requestError": "Request Error",
+    "badRequest": "Bad Request",
+    "unprocessableEntity": "Unprocessable Entity",
+    "internalServerError": "Internal Server Error",
+    "conflictConnection": "Conflict Connection",
+    "unauthorized": "Unauthorized",
+    "notFound": "Not Found",
+    "noInternetConnection": "No Internet Connection",
+    "deadlineExceeded": "Deadline Exceeded",
+    "accessForbidden": "Access Forbidden",
+    "badCertificate": "Bad Certificate",
+    "connectionError": "Connection Error",
+    "badResponse": "Bad Response",
+    "welcome": "Welcome",
+    "passwordChecker":"Password must be between 4 and 10 characters"
+}
