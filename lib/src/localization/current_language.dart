@@ -3,7 +3,7 @@ import 'package:hospital_mang2/src/constants/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class CurrentLanguageProvider extends ChangeNotifier {
-  String _currentLanguage = "en";
+  String _currentLanguage = "ar";
   String get currentLanguage => _currentLanguage;
 
   Future<void> changeLanguage() async {

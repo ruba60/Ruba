@@ -4,6 +4,7 @@ import 'package:hospital_mang2/generated/l10n.dart';
 import 'package:hospital_mang2/src/models/handcheck/sections_data.dart';
 import 'package:hospital_mang2/src/theme/app_colors.dart';
 import 'package:hospital_mang2/src/view_models/handcheck/handcheck_provider.dart';
+import 'package:hospital_mang2/src/views/ambulance/ambulance_screen.dart';
 import 'package:provider/provider.dart';
 
 class Login extends StatefulWidget {
@@ -54,7 +55,7 @@ class _LoginState extends State<Login> {
                                     value: _userType,
                                     onSaved: (value) => _userType = value,
                                     icon: const Icon(Icons.keyboard_arrow_down,
-                                        color: AppColors.lightBlue),
+                                        color: AppColors.secondary),
                                     isExpanded: true,
                                     items: handCheckProvider
                                         .handCheckData.sections
@@ -98,9 +99,12 @@ class _LoginState extends State<Login> {
 
                                         if (_globalKey.currentState!
                                             .validate()) {
-                                          _userType == 'Ambulance_Department'
-                                              ? print("MainScreen")
-                                              : print("Screen");
+                                          Navigator.pushAndRemoveUntil(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const AmbulanceScreen()),
+                                              (route) => false);
                                         }
                                       },
                                       child: const Text(

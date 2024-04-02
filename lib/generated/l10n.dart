@@ -209,6 +209,286 @@ class S {
       args: [],
     );
   }
+
+  /// `Ambulance Department`
+  String get ambulanceDepartment {
+    return Intl.message(
+      'Ambulance Department',
+      name: 'ambulanceDepartment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Find a patient`
+  String get searchPatient {
+    return Intl.message(
+      'Find a patient',
+      name: 'searchPatient',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ambulance department at the National Hospital of Suwayda`
+  String get ambulanceDepartmentTitle {
+    return Intl.message(
+      'Ambulance department at the National Hospital of Suwayda',
+      name: 'ambulanceDepartmentTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add patient`
+  String get addPatient {
+    return Intl.message(
+      'Add patient',
+      name: 'addPatient',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Last patients`
+  String get lastPatients {
+    return Intl.message(
+      'Last patients',
+      name: 'lastPatients',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Show all patients today`
+  String get showAllPatients {
+    return Intl.message(
+      'Show all patients today',
+      name: 'showAllPatients',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Required`
+  String get required {
+    return Intl.message(
+      'Required',
+      name: 'required',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Full name`
+  String get fullName {
+    return Intl.message(
+      'Full name',
+      name: 'fullName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Address`
+  String get address {
+    return Intl.message(
+      'Address',
+      name: 'address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Birth date`
+  String get birthDate {
+    return Intl.message(
+      'Birth date',
+      name: 'birthDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mother's name`
+  String get mothersname {
+    return Intl.message(
+      'Mother\'s name',
+      name: 'mothersname',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Birth place`
+  String get birthPlace {
+    return Intl.message(
+      'Birth place',
+      name: 'birthPlace',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gender`
+  String get gender {
+    return Intl.message(
+      'Gender',
+      name: 'gender',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Description`
+  String get description {
+    return Intl.message(
+      'Description',
+      name: 'description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Treatment`
+  String get treatment {
+    return Intl.message(
+      'Treatment',
+      name: 'treatment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Optional`
+  String get optional {
+    return Intl.message(
+      'Optional',
+      name: 'optional',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save data`
+  String get saveDate {
+    return Intl.message(
+      'Save data',
+      name: 'saveDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Patient Details`
+  String get patientDetails {
+    return Intl.message(
+      'Patient Details',
+      name: 'patientDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit`
+  String get edit {
+    return Intl.message(
+      'Edit',
+      name: 'edit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medical file`
+  String get medicalFile {
+    return Intl.message(
+      'Medical file',
+      name: 'medicalFile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Description of the patient's condition`
+  String get patientStatusDescription {
+    return Intl.message(
+      'Description of the patient\'s condition',
+      name: 'patientStatusDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Suggested treatment`
+  String get suggestedTreatment {
+    return Intl.message(
+      'Suggested treatment',
+      name: 'suggestedTreatment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Transfer to`
+  String get transferTo {
+    return Intl.message(
+      'Transfer to',
+      name: 'transferTo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Request an x-ray`
+  String get requestXray {
+    return Intl.message(
+      'Request an x-ray',
+      name: 'requestXray',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Request emergency tests`
+  String get requestEmergencyTests {
+    return Intl.message(
+      'Request emergency tests',
+      name: 'requestEmergencyTests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View medical file attachments`
+  String get viewFileAttachments {
+    return Intl.message(
+      'View medical file attachments',
+      name: 'viewFileAttachments',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get search {
+    return Intl.message(
+      'Search',
+      name: 'search',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit Patient`
+  String get editPatient {
+    return Intl.message(
+      'Edit Patient',
+      name: 'editPatient',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
