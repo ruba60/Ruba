@@ -1,5 +1,5 @@
 {
-    "appTitle": "مشفى زايد الشيرتي",
+    "appTitle": "مشفى زيد الشريطي",
     "requestError": "خطأ في الطلب",
     "badRequest": "خطأ في البيانات",
     "unprocessableEntity": "خطأ في البيانات",
@@ -31,7 +31,7 @@
     "description": "توصيف الحالة",
     "treatment": "العلاج المقترح",
     "optional": "اختياري",
-    "saveDate": "حفظ اليبانات",
+    "saveDate": "حفظ البيانات",
     "patientDetails": "تفاصيل المريض",
     "edit": "تعديل",
     "medicalFile": "ملف طبي",
@@ -42,5 +42,15 @@
     "requestEmergencyTests": "طلب تحاليل إسعافية",
     "viewFileAttachments": "عرض مرفقات الملف الطبي",
     "search": "بحث",
-    "editPatient": "تعديل المريض"
+    "editPatient": "تعديل المريض",
+    "man" : "ذكر",
+    "woman" : " أنثى",
+    "day" : "اليوم",
+    "viewWorkschedules" : "عرض جداول العمل",
+     "thestaff " : "طاقم العمل" ,
+     "scanning " : "مسح الهوية " ,
+     "selectadepartment" : "اختر قسم "
+     "send" : "ارسال ",
+     "enteryourrequest" : "ادخل الطلب"
+
 }

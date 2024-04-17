@@ -5,8 +5,11 @@ import 'package:hospital_mang2/src/theme/app_colors.dart';
 import 'package:hospital_mang2/src/views/ambulance/patients/add_patient.dart';
 
 class ShowPatientScreen extends StatelessWidget {
+  TextEditingController textController = TextEditingController();
+  TextEditingController textController2 = TextEditingController();
   final Patient patient;
-  const ShowPatientScreen({super.key, required this.patient});
+
+   ShowPatientScreen({super.key, required this.patient});
 
   @override
   Widget build(BuildContext context) {
@@ -94,36 +97,169 @@ class ShowPatientScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+
+
+                //transfer to department
                 ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      S.of(context).transferTo,
-                      style: Theme.of(context)
-                          .textTheme
-                          .titleMedium!
-                          .copyWith(color: AppColors.white),
-                    )),
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        List<String> selectedItems = []; //
+
+                        return StatefulBuilder(
+                          builder: (BuildContext context, StateSetter setState) {
+                            return AlertDialog(
+                              title: Text('Select a department :'),
+                              content: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  CheckboxListTile(
+                                    title: Text('Item 1'),
+                                    value: selectedItems.contains('Item 1'),
+                                    onChanged: (bool? value) {
+                                      setState(() {
+                                        if (value!) {
+                                          selectedItems.add('Item 1');
+                                        } else {
+                                          selectedItems.remove('Item 1');
+                                        }
+                                      });
+                                    },
+                                  ),
+                                  CheckboxListTile(
+                                    title: Text('Item 2'),
+                                    value: selectedItems.contains('Item 2'),
+                                    onChanged: (bool? value) {
+                                      setState(() {
+                                        if (value!) {
+                                          selectedItems.add('Item 2');
+                                        } else {
+                                          selectedItems.remove('Item 2');
+                                        }
+                                      });
+                                    },
+                                  ),
+                                  CheckboxListTile(
+                                    title: Text('Item 3'),
+                                    value: selectedItems.contains('Item 3'),
+                                    onChanged: (bool? value) {
+                                      setState(() {
+                                        if (value!) {
+                                          selectedItems.add('Item 3');
+                                        } else {
+                                          selectedItems.remove('Item 3');
+                                        }
+                                      });
+                                    },
+                                  ),
+                                ],
+                              ),
+                              actions: <Widget>[
+                                TextButton(
+                                  onPressed: () {
+
+                                    print('Selected items: $selectedItems');
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: Text('Send'),
+                                ),
+                              ],
+                            );
+                          },
+                        );
+                      },
+                    );
+                  },
+                  child: Text(
+                    S.of(context).transferTo,
+                    style: Theme.of(context)
+                        .textTheme
+                        .titleMedium!
+                        .copyWith(color: AppColors.white),
+                  ),
+                ),
+
+
                 const SizedBox(height: 16),
-                ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      S.of(context).requestXray,
-                      style: Theme.of(context)
-                          .textTheme
-                          .titleMedium!
-                          .copyWith(color: AppColors.white),
-                    )),
+
+
+                //request x_ray
+                ElevatedButton (
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text('Enter your request'),
+                          content: TextField(
+                            controller: textController,
+                          ),
+                          actions: <Widget>[
+                            TextButton(
+                              child: Text('Send'),
+                              onPressed: () {
+                                String request = textController.text;
+
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                  },
+                  child: Text(
+                    S.of(context).requestXray,
+                    style: Theme.of(context)
+                        .textTheme
+                        .titleMedium!
+                        .copyWith(color: AppColors.white),
+                  ),
+                ),
+
+
                 const SizedBox(height: 16),
-                ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      S.of(context).requestEmergencyTests,
-                      style: Theme.of(context)
-                          .textTheme
-                          .titleMedium!
-                          .copyWith(color: AppColors.white),
-                    )),
+
+                //requestEmergencyTests
+                ElevatedButton (
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text('Enter your request'),
+                          content: TextField(
+                            controller: textController2,
+                          ),
+                          actions: <Widget>[
+                            TextButton(
+                              child: Text('Send'),
+                              onPressed: () {
+                                String request = textController2.text;
+
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                  },
+                  child: Text(
+                    S.of(context).requestEmergencyTests,
+                    style: Theme.of(context)
+                        .textTheme
+                        .titleMedium!
+                        .copyWith(color: AppColors.white),
+                  ),
+                ),
+
                 const SizedBox(height: 16),
+
+
+
+                //viewFileAttachments
                 ElevatedButton(
                     onPressed: () {},
                     child: Text(

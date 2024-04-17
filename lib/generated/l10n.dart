@@ -25,6 +25,8 @@ class S {
 
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
+
+
   static Future<S> load(Locale locale) {
     final name = (locale.countryCode?.isEmpty ?? false)
         ? locale.languageCode
@@ -249,6 +251,14 @@ class S {
       args: [],
     );
   }
+  String get day {
+    return Intl.message(
+      'Day',
+      name: 'day',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Last patients`
   String get lastPatients {
@@ -265,6 +275,26 @@ class S {
     return Intl.message(
       'Show all patients today',
       name: 'showAllPatients',
+      desc: '',
+      args: [],
+    );
+  }
+
+
+
+  String get thestaff {
+    return Intl.message(
+      'The Staff',
+      name: 'the-staff',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get viewWorkschedules {
+    return Intl.message(
+      'View Work Schedules',
+      name: 'viewWorkschedules',
       desc: '',
       args: [],
     );
@@ -380,6 +410,16 @@ class S {
     );
   }
 
+  /// `Scan data`
+  String get scanDate {
+    return Intl.message(
+      'Scanning data',
+      name: 'ScanningDate',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Patient Details`
   String get patientDetails {
     return Intl.message(
@@ -489,7 +529,41 @@ class S {
       args: [],
     );
   }
+
+
+  /// `Send `
+  String get send {
+    return Intl.message(
+      'Send',
+      name: 'send',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your Request `
+  String get enterYourRequest {
+    return Intl.message(
+      'Enter Your Request',
+      name: 'enteryourrequest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Department`
+  String get selectDepartment {
+    return Intl.message(
+      'Select a department',
+      name: 'selectadepartment',
+      desc: '',
+      args: [],
+    );
+  }
+
+
 }
+
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   const AppLocalizationDelegate();

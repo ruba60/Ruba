@@ -42,5 +42,14 @@
     "requestEmergencyTests":"Request emergency tests",
     "viewFileAttachments":"View medical file attachments",
     "search":"Search",
-    "editPatient":"Edit Patient"
+    "editPatient":"Edit Patient",
+    "man":"Man",
+    "woman": "Women",
+    "day" : "Day",
+    "viewWork schedules" : "View Work Schedules ",
+    "the-staff" : " The Staff" ,
+    "scanning" : "Scanning" ,
+    "selectadepartment" : "Select a department " ,
+    "send"  : "Send",
+    "enteryourrequest" : "Enter your request"
 }

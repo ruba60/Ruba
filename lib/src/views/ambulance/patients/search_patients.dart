@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:hospital_mang2/generated/l10n.dart';
 import 'package:hospital_mang2/src/theme/app_colors.dart';
 import 'package:hospital_mang2/src/view_models/patients/search_patients_provider.dart';
@@ -64,13 +63,13 @@ class _SearchPatientState extends State<SearchPatient> {
                                   ElevatedButton(
                                       onPressed: () {
                                         _globalKey.currentState!.save();
-                                        if(_globalKey.currentState!.validate()){
+                                        if (_globalKey.currentState!
+                                            .validate()) {
                                           Provider.of<SearchPatientProvider>(
-                                                context,
-                                                listen: false)
-                                            .getPatients(_patient);
+                                                  context,
+                                                  listen: false)
+                                              .getPatients(_patient);
                                         }
-                                        
                                       },
                                       child: Text(S.of(context).search))
                                 ],

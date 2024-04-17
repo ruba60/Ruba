@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hospital_mang2/generated/l10n.dart';
 import 'package:hospital_mang2/src/views/ambulance/ambulance_screen.dart';
-import 'package:hospital_mang2/src/views/ambulance/patients/search_patients.dart';
+import 'package:hospital_mang2/src/views/ambulance/patients/add_patient.dart';
+import 'package:hospital_mang2/src/views/departments/department_main_view.dart';
 import 'package:hospital_mang2/src/views/login/login_screen.dart';
 import 'package:hospital_mang2/src/localization/current_language.dart';
 import 'package:hospital_mang2/src/theme/app_theme.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
             ],
             supportedLocales: S.delegate.supportedLocales,
             locale: Locale(currentLanguageProvider.currentLanguage),
-            home: const Login(),
+            home: const DepartmentMain(),
           );
         });
   }

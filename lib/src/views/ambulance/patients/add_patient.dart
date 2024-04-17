@@ -43,44 +43,57 @@ class _AddPatientState extends State<AddPatient> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
           child: Form(
             key: _globalKey,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                // Full Name
-                TextFormField(
-                    initialValue: widget.patient?.patientName,
-                    onSaved: (value) => patientName = value!,
-                    keyboardType: TextInputType.name,
-                    validator: (value) {
-                      if (value == null && value!.isEmpty) {
-                        return S.of(context).required;
-                      }
-                      return null;
-                    },
-                    decoration: InputDecoration(
-                      labelText: S.of(context).fullName,
-                    )),
+                Row(
+                  children: [
+                    // Full Name
+                    Expanded(
+                      child: TextFormField(
+                          initialValue: widget.patient?.patientName,
+                          onSaved: (value) => patientName = value!,
+                          keyboardType: TextInputType.name,
+                          validator: (value) {
+                            if (value == null && value!.isEmpty) {
+                              return S.of(context).required;
+                            }
+                            return null;
+                          },
+                          decoration: InputDecoration(
+                            labelText: S.of(context).fullName,
+                          )),
+                    ),
+
+                    SizedBox(
+                      width: 10,
+                    ),
+                    // Address
+                    Expanded(
+                      child: TextFormField(
+                        initialValue: widget.patient?.patientAddress,
+                        onSaved: (value) => patientAddress = value!,
+                        keyboardType: TextInputType.streetAddress,
+                        validator: (value) {
+                          if (value == null && value!.isEmpty) {
+                            return S.of(context).required;
+                          }
+                          return null;
+                        },
+                        decoration: InputDecoration(
+                          labelText: S.of(context).address,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
                 const SizedBox(height: 8),
 
-                // Address
-                TextFormField(
-                  initialValue: widget.patient?.patientAddress,
-                  onSaved: (value) => patientAddress = value!,
-                  keyboardType: TextInputType.streetAddress,
-                  validator: (value) {
-                    if (value == null && value!.isEmpty) {
-                      return S.of(context).required;
-                    }
-                    return null;
-                  },
-                  decoration: InputDecoration(
-                    labelText: S.of(context).address,
-                  ),
-                ),
-                const SizedBox(height: 8),
+
 
                 // Birth date
                 GestureDetector(
@@ -116,38 +129,7 @@ class _AddPatientState extends State<AddPatient> {
                 ),
                 const SizedBox(height: 8),
 
-                // mother's name
-                TextFormField(
-                  initialValue: widget.patient?.patientMothersDay,
-                  onSaved: (value) => patientMothersName = value!,
-                  keyboardType: TextInputType.name,
-                  validator: (value) {
-                    if (value == null && value!.isEmpty) {
-                      return S.of(context).required;
-                    }
-                    return null;
-                  },
-                  decoration: InputDecoration(
-                    labelText: S.of(context).mothersname,
-                  ),
-                ),
-                const SizedBox(height: 8),
 
-                // place
-                TextFormField(
-                  initialValue: widget.patient?.patientBirthPlace,
-                  onSaved: (value) => patientBirthPlace = value!,
-                  keyboardType: TextInputType.name,
-                  validator: (value) {
-                    if (value == null && value!.isEmpty) {
-                      return S.of(context).required;
-                    }
-                    return null;
-                  },
-                  decoration: InputDecoration(
-                    labelText: S.of(context).birthPlace,
-                  ),
-                ),
                 const SizedBox(height: 8),
 
                 // Gender
@@ -207,15 +189,33 @@ class _AddPatientState extends State<AddPatient> {
                 ),
                 const SizedBox(height: 16),
 
-                ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      S.of(context).saveDate,
-                      style: Theme.of(context)
-                          .textTheme
-                          .titleMedium!
-                          .copyWith(color: AppColors.white),
-                    )),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 5.0 , horizontal: 90.0 ),
+                  child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text(
+                        S.of(context).saveDate,
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleMedium!
+                            .copyWith(color: AppColors.white),
+                      )),
+                ),
+                const SizedBox(height: 10),
+
+                const SizedBox(height: 10),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 5.0 , horizontal: 90.0 ),
+                  child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text(
+                        S.of(context).scanDate,
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleMedium!
+                            .copyWith(color: AppColors.white),
+                      )),
+                ),
               ],
             ),
           ),
