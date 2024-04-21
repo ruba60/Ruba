@@ -111,7 +111,6 @@ class ShowPatientScreen extends StatelessWidget {
                         .copyWith(color: AppColors.white),
                   ),
                 ),
-
                 const SizedBox(height: 16),
 
                 // request x_ray

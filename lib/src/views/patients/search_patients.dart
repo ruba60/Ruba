@@ -4,10 +4,12 @@ import 'package:hospital_mang2/generated/l10n.dart';
 import 'package:hospital_mang2/src/theme/app_colors.dart';
 import 'package:hospital_mang2/src/view_models/patients/search_patients_provider.dart';
 import 'package:hospital_mang2/src/views/ambulance/widgets/ambulance_patient_row.dart';
+import 'package:hospital_mang2/src/views/departments/widgets/department_patient_row.dart';
 import 'package:provider/provider.dart';
 
 class SearchPatient extends StatefulWidget {
-  const SearchPatient({super.key});
+  final bool isAmbulance;
+  const SearchPatient({super.key, required this.isAmbulance});
 
   @override
   State<SearchPatient> createState() => _SearchPatientState();
@@ -78,9 +80,14 @@ class _SearchPatientState extends State<SearchPatient> {
                                 child: ListView.separated(
                                     shrinkWrap: true,
                                     itemBuilder: (context, index) {
-                                      return AmbulancePatientRow(
-                                          patient:
-                                              searchProvider.patients[index]);
+                                      return widget.isAmbulance
+                                          ? AmbulancePatientRow(
+                                              patient: searchProvider
+                                                  .patients[index])
+                                          : DepartmentPatientRow(
+                                            isAccept: true,
+                                              patient: searchProvider
+                                                  .patients[index]);
                                     },
                                     separatorBuilder: (context, index) =>
                                         const SizedBox(

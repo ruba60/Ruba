@@ -76,6 +76,7 @@
     "state": "State",
     "xrayResult": "XRay Result",
     "testResult": "Test Result",
-    "addPatientToEmergency":"Add patient to emergency",
-    "acceptPatientInRapidTreatment":"Accept patient as a rapid treatment"
+    "addPatientToEmergency": "Add patient to emergency",
+    "acceptPatientInRapidTreatment": "Accept patient as a rapid treatment",
+    "reject":"Reject"
 }

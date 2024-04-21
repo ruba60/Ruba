@@ -88,6 +88,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "patientsList": MessageLookupByLibrary.simpleMessage("قائمة المرضى"),
         "personalInfo":
             MessageLookupByLibrary.simpleMessage("المعلومات الشخصية"),
+        "reject": MessageLookupByLibrary.simpleMessage("رفض"),
         "requestEmergencyTests":
             MessageLookupByLibrary.simpleMessage("طلب تحاليل إسعافية"),
         "requestError": MessageLookupByLibrary.simpleMessage("خطأ في الطلب"),

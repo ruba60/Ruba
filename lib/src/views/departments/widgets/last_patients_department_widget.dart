@@ -21,6 +21,7 @@ class LastPatientsDepartmentWidget extends StatelessWidget {
                 : ListView.builder(
                     shrinkWrap: true,
                     itemBuilder: (context, index) => DepartmentPatientRow(
+                      isAccept: false,
                         patient: lastPatientsProvider.patients[index]),
                     itemCount: lastPatientsProvider.patients.length);
       },

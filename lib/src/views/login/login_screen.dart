@@ -34,7 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
           final handCheckProvider = Provider.of<HandCheckProvider>(context);
           if (!handCheckProvider.loading &&
               handCheckProvider.exception == null) {
-            _userDepartment = handCheckProvider.userSectionsData;
+            _userDepartment = handCheckProvider.handCheckData.sections.first;
           }
 
           return handCheckProvider.loading
@@ -68,9 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                         isExpanded: true,
                                         items: handCheckProvider
                                             .handCheckData.sections
-                                            .map<
-                                                    DropdownMenuItem<
-                                                        Department>>(
+                                            .map<DropdownMenuItem<Department>>(
                                                 (Department e) {
                                           return DropdownMenuItem(
                                             value: e,

@@ -11,6 +11,7 @@ class LoginProvider extends ChangeNotifier {
   login(Department selectedDepartment, String password) {
     _loading = true;
     try {
+      // Call login repository
       _department = selectedDepartment;
       _loading = false;
     } catch (e) {

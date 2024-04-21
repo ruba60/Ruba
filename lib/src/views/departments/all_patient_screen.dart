@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 import 'package:hospital_mang2/generated/l10n.dart';
+import 'package:hospital_mang2/src/models/department/department_data.dart';
 import 'package:hospital_mang2/src/theme/app_colors.dart';
 import 'package:hospital_mang2/src/view_models/department/department_provider.dart';
 import 'package:hospital_mang2/src/views/departments/widgets/department_patient_details_widget.dart';
 import 'package:provider/provider.dart';
 
 class AllPatientScreen extends StatelessWidget {
-  const AllPatientScreen({super.key});
+  final Department department;
+  const AllPatientScreen({super.key, required this.department});
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +46,7 @@ class AllPatientScreen extends StatelessWidget {
                                           MainAxisAlignment.center,
                                       children: [
                                         Text(
-                                          S.of(context).department,
+                                          department.departmentName,
                                           style: Theme.of(context)
                                               .textTheme
                                               .labelLarge!

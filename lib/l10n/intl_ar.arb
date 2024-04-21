@@ -77,5 +77,6 @@
     "xrayResult": "نتائج التصوير",
     "testResult": "نتائج الاختبار",
     "addPatientToEmergency": "إضافة المريض إلى حالة الطوارئ",
-    "acceptPatientInRapidTreatment": "قبول المريض كحالة علاج سريع"
+    "acceptPatientInRapidTreatment": "قبول المريض كحالة علاج سريع",
+    "reject": "رفض"
 }

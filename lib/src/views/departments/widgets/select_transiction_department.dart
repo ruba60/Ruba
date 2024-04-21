@@ -49,7 +49,10 @@ class SelectTransictionDepartment extends StatelessWidget {
                                             .changeSelectedId(index);
                                       },
                                       tileColor:
-                                          departmentProvider.selectedId == index
+                                          departmentProvider.selectedId ==
+                                                  departmentProvider
+                                                      .departments[index]
+                                                      .departmentId
                                               ? AppColors.lightBlue
                                               : AppColors.black,
                                       title: Text(departmentProvider

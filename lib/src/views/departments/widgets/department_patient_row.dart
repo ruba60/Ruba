@@ -5,7 +5,9 @@ import 'package:hospital_mang2/src/views/patients/medical_patient_profile.dart';
 
 class DepartmentPatientRow extends StatelessWidget {
   final Patient patient;
-  const DepartmentPatientRow({super.key, required this.patient});
+  final bool isAccept;
+  const DepartmentPatientRow(
+      {super.key, required this.patient, required this.isAccept});
 
   @override
   Widget build(BuildContext context) {
@@ -20,22 +22,51 @@ class DepartmentPatientRow extends StatelessWidget {
                   .titleMedium!
                   .copyWith(fontWeight: FontWeight.bold),
             ),
-            trailing: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              MedicalPatientProfile(patient: patient)));
-                },
-                child: Text(
-                  S.of(context).showDetails,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14.0,
-                  ),
-                ))),
+            trailing: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  MedicalPatientProfile(patient: patient)));
+                    },
+                    child: Text(
+                      S.of(context).showDetails,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14.0,
+                      ),
+                    )),
+                if (!isAccept) ...[
+                  const SizedBox(width: 4),
+                  ElevatedButton(
+                      onPressed: () {},
+                      child: Text(
+                        S.of(context).acceptPatient,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14.0,
+                        ),
+                      )),
+                  const SizedBox(width: 4),
+                  ElevatedButton(
+                      onPressed: () {},
+                      child: Text(
+                        S.of(context).reject,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14.0,
+                        ),
+                      )),
+                ],
+              ],
+            )),
       ),
     );
   }

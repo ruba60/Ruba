@@ -15,7 +15,7 @@ class AmbulanceScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(40),
         children: [
-          const SearchPatientWidget(),
+          const SearchPatientWidget(isAmbulance: true),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 8),
             child: Row(
@@ -54,4 +54,3 @@ class AmbulanceScreen extends StatelessWidget {
     );
   }
 }
-
