@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:hospital_mang2/src/models/ambulance/patient_data.dart';
-import 'package:hospital_mang2/src/views/ambulance/patients/show_patient.dart';
+import 'package:hospital_mang2/src/views/patients/show_patient.dart';
 
 class AmbulancePatientRow extends StatelessWidget {
   final Patient patient;

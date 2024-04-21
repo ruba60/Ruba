@@ -29,7 +29,7 @@ class _AddPatientState extends State<AddPatient> {
         ? DateTime.parse(widget.patient!.patientBirthDate)
         : DateTime.now();
     patientGender =
-        widget.patient != null ? widget.patient!.patientGender : "Man";
+        widget.patient != null ? widget.patient!.patientGender : S.current.man;
     super.initState();
   }
 
@@ -68,9 +68,8 @@ class _AddPatientState extends State<AddPatient> {
                           )),
                     ),
 
-                    SizedBox(
-                      width: 10,
-                    ),
+                    const SizedBox(width: 10),
+
                     // Address
                     Expanded(
                       child: TextFormField(
@@ -92,8 +91,6 @@ class _AddPatientState extends State<AddPatient> {
                 ),
 
                 const SizedBox(height: 8),
-
-
 
                 // Birth date
                 GestureDetector(
@@ -127,10 +124,7 @@ class _AddPatientState extends State<AddPatient> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 8),
-
-
-                const SizedBox(height: 8),
+                const SizedBox(height: 16),
 
                 // Gender
                 DropdownButtonFormField(
@@ -139,7 +133,7 @@ class _AddPatientState extends State<AddPatient> {
                   icon: const Icon(Icons.keyboard_arrow_down,
                       color: AppColors.secondary),
                   isExpanded: true,
-                  items: ["Man", "Woman"]
+                  items: [S.of(context).man, S.of(context).woman]
                       .map<DropdownMenuItem<String>>((String e) {
                     return DropdownMenuItem(
                       value: e,
@@ -190,7 +184,8 @@ class _AddPatientState extends State<AddPatient> {
                 const SizedBox(height: 16),
 
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 5.0 , horizontal: 90.0 ),
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 5.0, horizontal: 90.0),
                   child: ElevatedButton(
                       onPressed: () {},
                       child: Text(
@@ -201,11 +196,11 @@ class _AddPatientState extends State<AddPatient> {
                             .copyWith(color: AppColors.white),
                       )),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 20),
 
-                const SizedBox(height: 10),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 5.0 , horizontal: 90.0 ),
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 5.0, horizontal: 90.0),
                   child: ElevatedButton(
                       onPressed: () {},
                       child: Text(

@@ -25,8 +25,6 @@ class S {
 
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
-
-
   static Future<S> load(Locale locale) {
     final name = (locale.countryCode?.isEmpty ?? false)
         ? locale.languageCode
@@ -251,14 +249,6 @@ class S {
       args: [],
     );
   }
-  String get day {
-    return Intl.message(
-      'Day',
-      name: 'day',
-      desc: '',
-      args: [],
-    );
-  }
 
   /// `Last patients`
   String get lastPatients {
@@ -275,26 +265,6 @@ class S {
     return Intl.message(
       'Show all patients today',
       name: 'showAllPatients',
-      desc: '',
-      args: [],
-    );
-  }
-
-
-
-  String get thestaff {
-    return Intl.message(
-      'The Staff',
-      name: 'the-staff',
-      desc: '',
-      args: [],
-    );
-  }
-
-  String get viewWorkschedules {
-    return Intl.message(
-      'View Work Schedules',
-      name: 'viewWorkschedules',
       desc: '',
       args: [],
     );
@@ -410,16 +380,6 @@ class S {
     );
   }
 
-  /// `Scan data`
-  String get scanDate {
-    return Intl.message(
-      'Scanning data',
-      name: 'ScanningDate',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Patient Details`
   String get patientDetails {
     return Intl.message(
@@ -530,8 +490,61 @@ class S {
     );
   }
 
+  /// `Man`
+  String get man {
+    return Intl.message(
+      'Man',
+      name: 'man',
+      desc: '',
+      args: [],
+    );
+  }
 
-  /// `Send `
+  /// `Women`
+  String get woman {
+    return Intl.message(
+      'Women',
+      name: 'woman',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Day`
+  String get day {
+    return Intl.message(
+      'Day',
+      name: 'day',
+      desc: '',
+      args: [],
+    );
+  }
+
+  // skipped getter for the 'viewWork schedules' key
+
+  // skipped getter for the 'the-staff' key
+
+  /// `Scanning`
+  String get scanning {
+    return Intl.message(
+      'Scanning',
+      name: 'scanning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select a department `
+  String get selectadepartment {
+    return Intl.message(
+      'Select a department ',
+      name: 'selectadepartment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send`
   String get send {
     return Intl.message(
       'Send',
@@ -541,29 +554,276 @@ class S {
     );
   }
 
-  /// `Enter Your Request `
-  String get enterYourRequest {
+  /// `Enter your request`
+  String get enteryourrequest {
     return Intl.message(
-      'Enter Your Request',
+      'Enter your request',
       name: 'enteryourrequest',
       desc: '',
       args: [],
     );
   }
 
-  /// `Select Department`
-  String get selectDepartment {
+  /// `Scan Date`
+  String get scanDate {
     return Intl.message(
-      'Select a department',
-      name: 'selectadepartment',
+      'Scan Date',
+      name: 'scanDate',
       desc: '',
       args: [],
     );
   }
 
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
 
+  /// `Login`
+  String get login {
+    return Intl.message(
+      'Login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Show Details`
+  String get showDetails {
+    return Intl.message(
+      'Show Details',
+      name: 'showDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Patient details and admission`
+  String get patientDetailsAndAdmission {
+    return Intl.message(
+      'Patient details and admission',
+      name: 'patientDetailsAndAdmission',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `History Medical`
+  String get historyMedical {
+    return Intl.message(
+      'History Medical',
+      name: 'historyMedical',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Accept Patient`
+  String get acceptPatient {
+    return Intl.message(
+      'Accept Patient',
+      name: 'acceptPatient',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tests Management`
+  String get testsManagement {
+    return Intl.message(
+      'Tests Management',
+      name: 'testsManagement',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Patients List`
+  String get patientsList {
+    return Intl.message(
+      'Patients List',
+      name: 'patientsList',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Close`
+  String get close {
+    return Intl.message(
+      'Close',
+      name: 'close',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Department`
+  String get department {
+    return Intl.message(
+      'Department',
+      name: 'department',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Actions`
+  String get actions {
+    return Intl.message(
+      'Actions',
+      name: 'actions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Date`
+  String get date {
+    return Intl.message(
+      'Date',
+      name: 'date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Time`
+  String get time {
+    return Intl.message(
+      'Time',
+      name: 'time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Patient number`
+  String get patientNumber {
+    return Intl.message(
+      'Patient number',
+      name: 'patientNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Personal information`
+  String get personalInfo {
+    return Intl.message(
+      'Personal information',
+      name: 'personalInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Age`
+  String get age {
+    return Intl.message(
+      'Age',
+      name: 'age',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blode unit`
+  String get blodeUnit {
+    return Intl.message(
+      'Blode unit',
+      name: 'blodeUnit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medical History`
+  String get medicalHistory {
+    return Intl.message(
+      'Medical History',
+      name: 'medicalHistory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnosis in`
+  String get diagnosisin {
+    return Intl.message(
+      'Diagnosis in',
+      name: 'diagnosisin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By Doctor`
+  String get byDoctor {
+    return Intl.message(
+      'By Doctor',
+      name: 'byDoctor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `State`
+  String get state {
+    return Intl.message(
+      'State',
+      name: 'state',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `XRay Result`
+  String get xrayResult {
+    return Intl.message(
+      'XRay Result',
+      name: 'xrayResult',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Test Result`
+  String get testResult {
+    return Intl.message(
+      'Test Result',
+      name: 'testResult',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add patient to emergency`
+  String get addPatientToEmergency {
+    return Intl.message(
+      'Add patient to emergency',
+      name: 'addPatientToEmergency',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Accept patient as a rapid treatment`
+  String get acceptPatientInRapidTreatment {
+    return Intl.message(
+      'Accept patient as a rapid treatment',
+      name: 'acceptPatientInRapidTreatment',
+      desc: '',
+      args: [],
+    );
+  }
 }
-
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   const AppLocalizationDelegate();
