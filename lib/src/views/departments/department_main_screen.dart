@@ -53,8 +53,15 @@ class DepartmentMainScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView(
-          children: const [
-            Text("Search for patient"),
+          children:  [
+            Text(S.of(context).searchPatient,
+              style:
+              const TextStyle(
+                color: Colors.white,
+                fontWeight:
+                FontWeight.bold,
+                fontSize: 14.0,
+              ),),
             SizedBox(height: 8.0),
             SearchPatientWidget(isAmbulance: false),
             LastPatientsDepartmentWidget(),
